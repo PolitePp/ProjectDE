@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "oprenderedservicef785fbe4-19b1-4f56-994f-5f10390617c4",
+  "title" : "op_rendered_service",
+  "description" : "",
+  "created" : 1586086433949,
+  "lastModified" : 1586092418496,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "c0515d43-7a66-49d7-a74a-b747227addda",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ ]
+  },
+  "name" : "oprenderedservicef785fbe4-19b1-4f56-994f-5f10390617c4",
+  "sdcVersion" : "3.9.1",
+  "sdcId" : "7f68cad9-7729-11ea-b461-3736b65d4545"
+}

@@ -1,0 +1,7 @@
+{
+  "version" : 2,
+  "offsets" : {
+    "tableName=public.op_rendered_service;;;partitioned=false;;;partitionSequence=-1;;;partitionStartOffsets=;;;partitionMaxOffsets=;;;usingNonIncrementalLoad=false" : "id=75277398",
+    "$com.streamsets.pipeline.stage.origin.jdbc.table.TableJdbcSource.offset.version$" : "2"
+  }
+}

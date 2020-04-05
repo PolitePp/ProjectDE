@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "opdocreg611531a3-b1c1-48bd-b84f-d1c5b529e725",
+  "title" : "op_doc_reg",
+  "description" : "",
+  "created" : 1586091526028,
+  "lastModified" : 1586091526096,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "ec09b29f-243b-4280-a5a9-53f938bace00",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ ]
+  },
+  "name" : "opdocreg611531a3-b1c1-48bd-b84f-d1c5b529e725",
+  "sdcVersion" : "3.9.1",
+  "sdcId" : "7f68cad9-7729-11ea-b461-3736b65d4545"
+}

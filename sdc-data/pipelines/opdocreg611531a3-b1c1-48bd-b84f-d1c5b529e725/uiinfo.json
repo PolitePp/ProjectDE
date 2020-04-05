@@ -1,0 +1,84 @@
+{
+  "FieldHasher_02" : {
+    "description" : "",
+    "label" : "Field Hasher 2",
+    "xPos" : 720,
+    "yPos" : 200,
+    "stageType" : "PROCESSOR"
+  },
+  "JDBCMultitableConsumer_01" : {
+    "description" : "",
+    "label" : "JDBC Multitable Consumer 1",
+    "xPos" : 60,
+    "yPos" : 50,
+    "stageType" : "SOURCE"
+  },
+  "JDBCProducer_02" : {
+    "description" : "",
+    "label" : "JDBC Producer 2",
+    "xPos" : 1160,
+    "yPos" : 200,
+    "stageType" : "TARGET"
+  },
+  "ExpressionEvaluator_01" : {
+    "description" : "",
+    "label" : "Expression Evaluator 1",
+    "xPos" : 720,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "JDBCProducer_01" : {
+    "description" : "",
+    "label" : "JDBC Producer 1",
+    "xPos" : 1160,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  "FieldHasher_01" : {
+    "description" : "",
+    "label" : "Field Hasher 1",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldRemover_01" : {
+    "description" : "",
+    "label" : "Field Remover 1",
+    "xPos" : 500,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldRemover_02" : {
+    "description" : "",
+    "label" : "Field Remover 2",
+    "xPos" : 500,
+    "yPos" : 200,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_02" : {
+    "description" : "",
+    "label" : "Expression Evaluator 2",
+    "xPos" : 940,
+    "yPos" : 200,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : "1000",
+      "timeout" : 30000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "FieldRenamer_01" : {
+    "description" : "",
+    "label" : "Field Renamer 1",
+    "xPos" : 940,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  }
+}

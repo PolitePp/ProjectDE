@@ -1,0 +1,105 @@
+{
+  "ExpressionEvaluator_05" : {
+    "description" : "",
+    "label" : "Expression Evaluator 3",
+    "xPos" : 940,
+    "yPos" : 350,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_04" : {
+    "description" : "",
+    "label" : "Expression Evaluator 4",
+    "xPos" : 721.4127807617188,
+    "yPos" : 200,
+    "stageType" : "PROCESSOR"
+  },
+  "JDBCProducer_03" : {
+    "description" : "",
+    "label" : "JDBC Producer 3",
+    "xPos" : 1160,
+    "yPos" : 350,
+    "stageType" : "TARGET"
+  },
+  "JDBCProducer_02" : {
+    "description" : "",
+    "label" : "JDBC Producer 2",
+    "xPos" : 1211.25830078125,
+    "yPos" : 198.58718872070312,
+    "stageType" : "TARGET"
+  },
+  "FieldRemover_03" : {
+    "description" : "",
+    "label" : "Field Remover 3",
+    "xPos" : 500,
+    "yPos" : 200,
+    "stageType" : "PROCESSOR"
+  },
+  "JDBCProducer_01" : {
+    "description" : "",
+    "label" : "JDBC Producer 1",
+    "xPos" : 940,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  "FieldRemover_04" : {
+    "description" : "",
+    "label" : "Field Remover 4",
+    "xPos" : 500,
+    "yPos" : 350,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_03" : {
+    "description" : "",
+    "label" : "Expression Evaluator 3",
+    "xPos" : 720,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldRemover_02" : {
+    "description" : "",
+    "label" : "Field Remover 2",
+    "xPos" : 500,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldHasher_02" : {
+    "description" : "",
+    "label" : "Field Hasher 2",
+    "xPos" : 720,
+    "yPos" : 350,
+    "stageType" : "PROCESSOR"
+  },
+  "JDBCMultitableConsumer_01" : {
+    "description" : "",
+    "label" : "JDBC Multitable Consumer 1",
+    "xPos" : 60,
+    "yPos" : 50,
+    "stageType" : "SOURCE"
+  },
+  "FieldHasher_01" : {
+    "description" : "",
+    "label" : "Field Hasher 1",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 30000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "FieldRenamer_01" : {
+    "description" : "",
+    "label" : "Field Renamer 1",
+    "xPos" : 964.9448030652852,
+    "yPos" : 196.37968027144342,
+    "stageType" : "PROCESSOR"
+  }
+}
