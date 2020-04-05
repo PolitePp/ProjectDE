@@ -1,6 +1,6 @@
 # ProjectDE
 
-Проект посвящён работе с медицинскими данными, а именно документами и их услугами. По одному документу (болезни), может быть несколько услуг. Данная информация хранится в разных таблицах. Примеры строк указаны в файлах iemk_iemk_op_doc_reg.sql и iemk_iemk_op_rendered_service.sql
+Проект посвящён работе с медицинскими данными, а именно документами и их услугами. По одному документу (болезни), может быть несколько услуг. Данная информация хранится в разных таблицах. Примеры строк указаны в файлах SQLscripts/iemk_iemk_op_doc_reg.sql и SQLscripts/iemk_iemk_op_rendered_service.sql
 
 Схема процесса [здесь](https://drive.google.com/file/d/13JRANqyTh8cPzndjeIC_n5-PV8M5g487/view?usp=sharing)
 
@@ -14,5 +14,4 @@
 и через wget скачать драйвер
 Полную инструкцию по созданию JDBC с вертика можно посмотреть [здесь](https://www.vertica.com/kb/StreamSetsCG/Content/Partner/StreamSetsCG.htm)
 
-В streamsets созданы два pipelines - op_doc_reg и op_rendered_service. Оба трансформируют информацию таким образом, чтобы она могла быть загружена в цхд, построенное по архитектуре Data Vault 2.0
-
+В streamsets созданы два pipelines - op_doc_reg и op_rendered_service. Оба трансформируют информацию таким образом, чтобы она могла быть загружена в цхд, построенное по архитектуре Data Vault 2.0. Скрипты создания таблиц по данной архитектуре в файле SQLscripts/CreateSchema.sql
