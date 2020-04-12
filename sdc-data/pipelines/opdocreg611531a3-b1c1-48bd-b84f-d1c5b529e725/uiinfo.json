@@ -24,7 +24,7 @@
     "description" : "",
     "label" : "Expression Evaluator 1",
     "xPos" : 720,
-    "yPos" : 50,
+    "yPos" : 49,
     "stageType" : "PROCESSOR"
   },
   "JDBCProducer_01" : {
@@ -38,7 +38,7 @@
     "description" : "",
     "label" : "Field Hasher 1",
     "xPos" : 280,
-    "yPos" : 50,
+    "yPos" : 49,
     "stageType" : "PROCESSOR"
   },
   "FieldRemover_01" : {
