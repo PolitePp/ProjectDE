@@ -9,85 +9,85 @@ properties = {
     'user': 'postgres',
     'password': '123456',
 }
-# query = '(select * from op_doc_reg) odr'
-#
-# df2 = spark.read \
-#     .format('jdbc') \
-#     .option('driver', properties['driver']) \
-#     .option('url', properties['url']) \
-#     .option('user', properties['user']) \
-#     .option('password', properties['password']) \
-#     .option('dbtable', query) \
-#     .load()
-#
-# df2.createOrReplaceTempView("op_doc_reg")
-#
-# doc_hub = spark.sql('select id as id_doc_reg'
-#                     ', md5(id) as hk_doc_reg'
-#                     ', now() as load_date'
-#                     ', 1 as record_source '
-#                     'from op_doc_reg')
-#
-# doc_hub.write.format('com.vertica.spark.datasource.DefaultSource') \
-#     .option('db', 'docker') \
-#     .option('user', 'dbadmin') \
-#     .option('password', '123456') \
-#     .option('table', 'hub_doc_reg') \
-#     .option('host', '172.24.0.7') \
-#     .option('hdfs_url', 'hdfs://172.24.0.4:9000/user/hadoop') \
-#     .option('web_hdfs_url', 'webhdfs://172.24.0.4:9870/user/hadoop') \
-#     .mode('append') \
-#     .save()
-#
-# doc_sat = spark.sql('''select md5(id) as hk_doc_reg
-#                     , now() as load_date
-#                     , md5(concat_ws(',', idmu, document_id, idmedicaldoctype, doc_date, confident_id, patient_confident_id
-#                     , assignee_confident_id, patient_id, idprofessional, idrole, post_guid, spec_guid, card_number
-#                     , case_begin, case_end, structured_body_id, create_date, change_date, log_id, csg_mes_id
-#                     , hightech_medical_assist_id, subdiv_id, deleted_mark, case_id, prof_podrazdel_id, prof_otdel
-#                     , fed_00365_guid, fed_33001_guid, id_ref_specialist)) as hash_diff
-#                     , 1 as record_source
-#                     , idmu
-#                     , document_id
-#                     , idmedicaldoctype
-#                     , doc_date
-#                     , confident_id
-#                     , patient_confident_id
-#                     , assignee_confident_id
-#                     , patient_id
-#                     , idprofessional
-#                     , idrole
-#                     , post_guid
-#                     , spec_guid
-#                     , card_number
-#                     , case_begin
-#                     , case_end
-#                     , structured_body_id
-#                     , create_date
-#                     , change_date
-#                     , log_id
-#                     , csg_mes_id
-#                     , hightech_medical_assist_id
-#                     , subdiv_id
-#                     , deleted_mark
-#                     , case_id
-#                     , prof_podrazdel_id
-#                     , prof_otdel
-#                     , fed_00365_guid
-#                     , fed_33001_guid
-#                     , id_ref_specialist
-#                     from op_doc_reg''')
-#
-# doc_sat.write.format('com.vertica.spark.datasource.DefaultSource') \
-#     .option('db', 'docker') \
-#     .option('user', 'dbadmin') \
-#     .option('password', '123456') \
-#     .option('table', 'sat_doc_reg') \
-#     .option('host', '172.24.0.7') \
-#     .option('hdfs_url', 'hdfs://172.24.0.4:9000/user/hadoop') \
-#     .option('web_hdfs_url', 'webhdfs://172.24.0.4:9870/user/hadoop') \
-#     .mode('append') \
-#     .save()
+query = '(select * from op_doc_reg) odr'
+
+df2 = spark.read \
+    .format('jdbc') \
+    .option('driver', properties['driver']) \
+    .option('url', properties['url']) \
+    .option('user', properties['user']) \
+    .option('password', properties['password']) \
+    .option('dbtable', query) \
+    .load()
+
+df2.createOrReplaceTempView("op_doc_reg")
+
+doc_hub = spark.sql('select id as id_doc_reg'
+                    ', md5(id) as hk_doc_reg'
+                    ', now() as load_date'
+                    ', 1 as record_source '
+                    'from op_doc_reg')
+
+doc_hub.write.format('com.vertica.spark.datasource.DefaultSource') \
+    .option('db', 'docker') \
+    .option('user', 'dbadmin') \
+    .option('password', '123456') \
+    .option('table', 'hub_doc_reg') \
+    .option('host', '172.24.0.7') \
+    .option('hdfs_url', 'hdfs://172.24.0.4:9000/user/hadoop') \
+    .option('web_hdfs_url', 'webhdfs://172.24.0.4:9870/user/hadoop') \
+    .mode('append') \
+    .save()
+
+doc_sat = spark.sql('''select md5(id) as hk_doc_reg
+                    , now() as load_date
+                    , md5(concat_ws(',', idmu, document_id, idmedicaldoctype, doc_date, confident_id, patient_confident_id
+                    , assignee_confident_id, patient_id, idprofessional, idrole, post_guid, spec_guid, card_number
+                    , case_begin, case_end, structured_body_id, create_date, change_date, log_id, csg_mes_id
+                    , hightech_medical_assist_id, subdiv_id, deleted_mark, case_id, prof_podrazdel_id, prof_otdel
+                    , fed_00365_guid, fed_33001_guid, id_ref_specialist)) as hash_diff
+                    , 1 as record_source
+                    , idmu
+                    , document_id
+                    , idmedicaldoctype
+                    , doc_date
+                    , confident_id
+                    , patient_confident_id
+                    , assignee_confident_id
+                    , patient_id
+                    , idprofessional
+                    , idrole
+                    , post_guid
+                    , spec_guid
+                    , card_number
+                    , case_begin
+                    , case_end
+                    , structured_body_id
+                    , create_date
+                    , change_date
+                    , log_id
+                    , csg_mes_id
+                    , hightech_medical_assist_id
+                    , subdiv_id
+                    , deleted_mark
+                    , case_id
+                    , prof_podrazdel_id
+                    , prof_otdel
+                    , fed_00365_guid
+                    , fed_33001_guid
+                    , id_ref_specialist
+                    from op_doc_reg''')
+
+doc_sat.write.format('com.vertica.spark.datasource.DefaultSource') \
+    .option('db', 'docker') \
+    .option('user', 'dbadmin') \
+    .option('password', '123456') \
+    .option('table', 'sat_doc_reg') \
+    .option('host', '172.24.0.7') \
+    .option('hdfs_url', 'hdfs://172.24.0.4:9000/user/hadoop') \
+    .option('web_hdfs_url', 'webhdfs://172.24.0.4:9870/user/hadoop') \
+    .mode('append') \
+    .save()
 
 query = '(select * from op_rendered_service) ors'
 
